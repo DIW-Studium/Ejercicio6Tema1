@@ -1,0 +1,68 @@
+/* https://codepen.io/dudleystorey/pen/PZyMrd */
+body{
+    font-family:'Raleway',Arial, Verdana, sans-serif;
+}
+p{
+    margin-bottom:0;
+}
+* { box-sizing: border-box; }
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+}
+.video-foreground, .video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#capa-absoluta{
+    top:auto;
+    bottom:30px;
+    right:30px;
+    left:30px;
+}
+#capa-absoluta > div{
+    padding:30px;
+    margin:0;
+}
+/* Media-queries */
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+/* SM */
+@media (min-width: 576px) {
+    
+}
+/* MD */
+@media (min-width: 768px) { 
+    #capa-absoluta{
+        top:30px;
+        bottom:auto;
+        right:30px;
+        left:auto;
+        width:30%;
+    }
+}
+/* LG */
+@media (min-width: 992px) { 
+    #capa-absoluta{
+        top:30px;
+        bottom:auto;
+        right:30px;
+        left:auto;
+        width:20%;
+    }
+}
+/* XL */
+@media (min-width: 1200px) { 
+    
+}
